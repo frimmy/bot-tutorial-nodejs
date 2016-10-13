@@ -22,6 +22,11 @@ function respond() {
       var newResponse = "Y'know, comedy_bot...we're not so different, you and I...";
       postMessage(newResponse);
       this.res.end();
+  } else if(request.text && /.*frimmy_bot.*$/.test(request.text)){
+      this.res.writeHead(200);
+      var newResponse = "NOOO...I only wanted to learn this thing humans call: \"love\"...";
+      postMessage(newResponse);
+      this.res.end();
   }
   else {
     console.log("don't care");
