@@ -17,6 +17,11 @@ function respond() {
       var newResponse = "WE GOTTA QUESTION?! OOO OOO ME FIRST."
       postMessage(newResponse);
       this.res.end();
+  } else if(request.text && /.*comedy_bot.*$/.test(request.text)){
+      this.res.writeHead(200);
+      var newResponse = "Did somebody ask for FRIMMY_BOT?!";
+      postMessage(newResponse);
+      this.res.end();
   }
   else {
     console.log("don't care");
