@@ -27,6 +27,11 @@ function respond() {
       var newResponse = "NOOO...I only wanted to learn this thing humans call: \"love\"...";
       postMessage(newResponse);
       this.res.end();
+  } else if(request.text && /.*frimmy bot.*$/.test(request.text)){
+      this.res.writeHead(200);
+      var newResponse = "NOOO...I only wanted to learn this thing humans call: \"love\"...";
+      postMessage(newResponse);
+      this.res.end();
   }
   else {
     console.log("don't care");
