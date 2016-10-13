@@ -19,7 +19,7 @@ function respond() {
       this.res.end();
   } else if(request.text && /.*comedy_bot.*$/.test(request.text)){
       this.res.writeHead(200);
-      var newResponse = "Did somebody ask for FRIMMY_BOT?!";
+      var newResponse = "Y'know, comedy_bot...we're not so different, you and I...";
       postMessage(newResponse);
       this.res.end();
   }
