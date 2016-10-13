@@ -11,8 +11,8 @@ function respond() {
       this.res.writeHead(200);
       postMessage();
       this.res.end();
-    
-  } else if(request.text && /^\?$/.test(request.text)){
+
+  } else if(request.text && /^(\w+)*\?$/.test(request.text)){
       this.res.writeHead(200);
       var newResponse = "WE GOTTA QUESTION?! OOO OOO ME FIRST."
       postMessage(newResponse);
