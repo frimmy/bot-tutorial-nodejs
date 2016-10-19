@@ -21,6 +21,11 @@ function respond() {
       var newResponse = "YES I AM MYNO BOT";
       postMessage(newResponse);
       this.res.end();
+    } else if(request.text && /.*fuck you robot.*$/.test(request.text)){
+      this.res.writeHead(200);
+      var newResponse = "WOW SALTY ARE WE?!";
+      postMessage(newResponse);
+      this.res.end();
     } else {
     console.log("don't care");
     this.res.writeHead(200);
