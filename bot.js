@@ -26,6 +26,11 @@ function respond() {
       var newResponse = "WOW SALTY ARE WE?!";
       postMessage(newResponse);
       this.res.end();
+    } else if(request.text && /.*eat dat ass.*$/.test(request.text.toLowerCase()) || /.*eda.*$/.test(request.text.toLowerCase()) || /.*e d a.*$/.test(request.text.toLowerCase())){
+      this.res.writeHead(200);
+      var newResponse = "MUNCH ON DAT ASS DO";
+      postMessage(newResponse);
+      this.res.end();
     } else {
     console.log("don't care");
     this.res.writeHead(200);
