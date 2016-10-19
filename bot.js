@@ -7,28 +7,21 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
 
-  if(request.text && botRegex.test(request.text)) {
+      if(request.text && botRegex.test(request.text)) {
       this.res.writeHead(200);
       postMessage();
       this.res.end();
-
-  } else if(request.text && /^(\w+)*\?$/.test(request.text)){
+    } else if(request.text && /.*dammit myno-bot*$/.test(request.text)){
       this.res.writeHead(200);
-      var newResponse = "WE GOTTA QUESTION?! OOO OOO ME FIRST."
+      var newResponse = "me sorry --- me can learn \"love\"...";
       postMessage(newResponse);
       this.res.end();
-  } else if(request.text && /.*myno-bot.*$/.test(request.text)){
+    } else if(request.text && /.*myno-bot.*$/.test(request.text)){
       this.res.writeHead(200);
-      var newResponse = "Y'know, myno-bot...we're not so different, you and I...";
+      var newResponse = "YES I AM MYNO BOT";
       postMessage(newResponse);
       this.res.end();
-  } else if(request.text && /.*myno-bot.*$/.test(request.text)){
-      this.res.writeHead(200);
-      var newResponse = "NOOO...I only wanted to learn this thing humans call: \"love\"...";
-      postMessage(newResponse);
-      this.res.end();
-    }
-  else {
+    } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
