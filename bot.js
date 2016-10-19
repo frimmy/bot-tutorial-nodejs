@@ -17,22 +17,17 @@ function respond() {
       var newResponse = "WE GOTTA QUESTION?! OOO OOO ME FIRST."
       postMessage(newResponse);
       this.res.end();
-  } else if(request.text && /.*comedy_bot.*$/.test(request.text)){
+  } else if(request.text && /.*myno-bot.*$/.test(request.text)){
       this.res.writeHead(200);
-      var newResponse = "Y'know, comedy_bot...we're not so different, you and I...";
+      var newResponse = "Y'know, myno-bot...we're not so different, you and I...";
       postMessage(newResponse);
       this.res.end();
-  } else if(request.text && /.*frimmy_bot.*$/.test(request.text)){
-      this.res.writeHead(200);
-      var newResponse = "NOOO...I only wanted to learn this thing humans call: \"love\"...";
-      postMessage(newResponse);
-      this.res.end();
-  } else if(request.text && /.*frimmy bot.*$/.test(request.text)){
+  } else if(request.text && /.*myno-bot.*$/.test(request.text)){
       this.res.writeHead(200);
       var newResponse = "NOOO...I only wanted to learn this thing humans call: \"love\"...";
       postMessage(newResponse);
       this.res.end();
-  }
+    }
   else {
     console.log("don't care");
     this.res.writeHead(200);
